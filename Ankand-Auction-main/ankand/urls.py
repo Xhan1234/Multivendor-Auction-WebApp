@@ -15,5 +15,8 @@ urlpatterns = [
     path('', include('auctions.urls')),
     path('', include('users.urls')),
     path('', include('messaging.urls')),
+<<<<<<< HEAD
     path('', include('payments.urls')),
+=======
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

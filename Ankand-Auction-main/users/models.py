@@ -42,8 +42,11 @@ class CustomUserManager(BaseUserManager):
 
 class UserProfile(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(unique=True)  # Include email as a separate field
+<<<<<<< HEAD
     paypal_recipient_email = models.EmailField(null=True, blank=True)
     stripe_account_id = models.CharField(max_length=150, null=True, blank=True)
+=======
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
     username = models.CharField(max_length=150, unique=True)
     first_name = models.CharField(max_length=150)
     last_name = models.CharField(max_length=150)
@@ -78,7 +81,11 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
         if self.profile_picture and hasattr(self.profile_picture, 'url'):
             return self.profile_picture.url
         else:
+<<<<<<< HEAD
             return "/staticfiles/images/user/user.png"
+=======
+            return "/static/images/bg/auction-authr1.png"
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
 
     def get_full_name(self):
         return self.username
@@ -90,6 +97,7 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
         return self.username
 
     def is_profile_complete(self):
+<<<<<<< HEAD
         return all([self.first_name, self.last_name, self.state, self.city, self.street, self.house, self.zip_code, self.postal_code, self.phone, self.paypal_recipient_email, self.stripe_account_id])  # Check if required fields are not empty
 
 
@@ -107,3 +115,7 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
 
 #     def __str__(self):
 #         return f'{self.paypal_recipient_email}'
+=======
+        return all([self.first_name, self.last_name, self.state, self.city, self.street, self.house, self.zip_code, self.postal_code, self.phone])  # Check if required fields are not empty
+
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388

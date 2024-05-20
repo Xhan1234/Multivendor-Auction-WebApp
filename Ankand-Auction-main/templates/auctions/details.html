@@ -1,11 +1,14 @@
 {% extends '_base.html' %}
 {% load static %}
 {% block contents %}
+<<<<<<< HEAD
 {% load tz %}  {# Load the timezone template tags #}
 {% get_current_timezone as TIME_ZONE %}  {# Get the current timezone #}
 
 {% comment %} Current time in UTC: {% now "Y-m-d H:i:s" %} {% endcomment %}
 {% comment %} Current time in {{ TIME_ZONE }} timezone: {{ localtime }} {% endcomment %}
+=======
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
 <style>
     figure.zoom {
         background-position: 50% 50%;
@@ -21,6 +24,7 @@
         transition: transform: 0.5s;
         display: block;
       }
+<<<<<<< HEAD
 
       *{
         margin: 0;
@@ -62,6 +66,8 @@
         color: #c59b08;
     }
 
+=======
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
 </style>
 
 <script>
@@ -75,6 +81,7 @@
     }
 </script>
 
+<<<<<<< HEAD
 <div class="inner-banner">
     <div class="container">
         <h2 class="inner-banner-title  wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".4s">Auction Details
@@ -88,10 +95,13 @@
     </div>
 </div>
 
+=======
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
 <div class="auction-details-section pt-120 pb-120">
     <img alt="image" src="{% static 'images/bg/section-bg.png' %}" class="img-fluid section-bg-top">
     <img alt="image" src="{% static 'images/bg/section-bg.png' %}" class="img-fluid section-bg-bottom">
     <div class="container">
+<<<<<<< HEAD
         <div class="messages">
             {% for message in messages %}
             <div class="alert {% if message.tags == 'error' %}alert-danger{% endif %}
@@ -102,6 +112,8 @@
             {% endfor %}
         </div>
         <div id="message-container"></div>
+=======
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
         <div class="row g-4 mb-50">
             <div
                 class="col-xl-6 col-lg-7 d-flex flex-row align-items-start justify-content-lg-start justify-content-center flex-md-nowrap flex-wrap gap-4">
@@ -136,6 +148,7 @@
                     data-wow-duration="1.5s" data-wow-delay=".4s">
                     {% if auction.image %}
                     <div class="tab-pane big-image show active" id="gallery-img1">
+<<<<<<< HEAD
                         {% if not auction.closed %}
                             <div class="auction-gallery-timer d-flex align-items-center justify-content-center flex-wrap">
                                 <h3><span id="days"></span><span id="hours"></span><span id="minutes"></span><span id="seconds"></span></h3>
@@ -144,11 +157,19 @@
 
                         <figure class="zoom" onmousemove="zoom(event)" style="background-image: url({{ auction.image.url }});">
                             <img src="{{ auction.image.url }}" style="{% if not auction.closed %}height: 350px;{% else %}height: 410px;{% endif %} width: 500px;"/>
+=======
+                        <div class="auction-gallery-timer d-flex align-items-center justify-content-center flex-wrap">
+                            <h3><span id="days"></span><span id="hours"></span><span id="minutes"></span><span id="seconds"></span></h3>
+                        </div>
+                        <figure class="zoom" onmousemove="zoom(event)" style="background-image: url({{ auction.image.url }});">
+                            <img src="{{ auction.image.url }}" style=" height: 350px; width: 500px;"/>
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
                           </figure>
                     </div>
                     {% endif %}
                     {% if auction.image1 %}
                     <div class="tab-pane big-image fade" id="gallery-img2">
+<<<<<<< HEAD
                     {% if not auction.closed %}
                         <div class="auction-gallery-timer d-flex align-items-center justify-content-center flex-wrap">
                             <h3><span id="days1"></span><span id="hours1"></span><span id="minutes1"></span><span id="seconds1"></span></h3>
@@ -157,11 +178,19 @@
                   
                         <figure class="zoom" onmousemove="zoom(event)" style="background-image: url({{ auction.image1.url }});">
                             <img src="{{ auction.image1.url }}" style="{% if not auction.closed %}height: 350px;{% else %}height: 410px;{% endif %} width: 500px;"/>
+=======
+                        <div class="auction-gallery-timer d-flex align-items-center justify-content-center flex-wrap">
+                            <h3><span id="days1"></span><span id="hours1"></span><span id="minutes1"></span><span id="seconds1"></span></h3>
+                        </div>
+                        <figure class="zoom" onmousemove="zoom(event)" style="background-image: url({{ auction.image1.url }});">
+                            <img src="{{ auction.image1.url }}" style="height: 350px; width: 500px;"/>
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
                           </figure>
                     </div>
                     {% endif %}
                     {% if auction.image2 %}
                     <div class="tab-pane big-image fade" id="gallery-img3">
+<<<<<<< HEAD
                     {% if not auction.closed %}
                         <div class="auction-gallery-timer d-flex align-items-center justify-content-center flex-wrap">
                             <h3><span id="days2"></span><span id="hours2"></span><span id="minutes2"></span><span id="seconds2"></span></h3>
@@ -170,6 +199,13 @@
 
                         <figure class="zoom" onmousemove="zoom(event)" style="background-image: url({{ auction.image2.url }});">
                             <img src="{{ auction.image2.url }}" style="{% if not auction.closed %}height: 350px;{% else %}height: 410px;{% endif %} width: 500px;"/>
+=======
+                        <div class="auction-gallery-timer d-flex align-items-center justify-content-center flex-wrap">
+                            <h3><span id="days2"></span><span id="hours2"></span><span id="minutes2"></span><span id="seconds2"></span></h3>
+                        </div>
+                        <figure class="zoom" onmousemove="zoom(event)" style="background-image: url({{ auction.image2.url }});">
+                            <img src="{{ auction.image2.url }}" style="height: 350px; width: 500px;"/>
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
                           </figure>
                     </div>
                     {% endif %}
@@ -178,6 +214,7 @@
             <div class="col-xl-6 col-lg-5">
                 <div class="auction-details-right wow fadeInDown" data-wow-duration="1.5s" data-wow-delay=".2s">
                     <h3>{{ auction.title }}</h3>
+<<<<<<< HEAD
 
                     {% if auction.closed %}
                     Rating: {{ average }}
@@ -289,6 +326,75 @@
                                 <p>Winner : {{ auction.winnerBid }}</p>
                             {% endif %}
                         </div>
+=======
+                    <p class="para">{{ auction.description }}</p>
+                    <h4>Bidding Price:
+                        <span>
+                            {% if auction.latest_bid is not None %}
+                                ${{ auction.latest_bid }}
+                            {% else %}
+                                ${{ auction.price }}
+                            {% endif %}
+                          </span>
+                    </h4>
+
+                    {% if not auction.closed %}
+                    <div class="bid-form">
+                        <div class="form-title">
+                            <h5>Bid Now</h5>
+                            <p>Bid Amount : Minimum Bid 
+                                {% if auction.latest_bid is not None %}
+                                    ${{ auction.latest_bid }}
+                                {% else %}
+                                    ${{ auction.price }}
+                                {% endif %}</p>
+                        </div>
+
+                        <div class="messages">
+                            {% for message in messages %}
+                            <div class="alert {% if message.tags == 'error' %}alert-danger{% endif %}
+                                    {% if message.tags == 'success' %}alert-success{% endif %}
+                                    {% if message.tags == 'info' %}alert-info{% endif %}">
+                                {{ message }}
+                            </div>
+                            {% endfor %}
+                        </div>
+
+                        <form method="POST" action="{% url 'auctions-submit' %}">
+                            {% csrf_token %}
+                            <div class="form-inner gap-2">
+                                <input type="text" name="bid_price" id="floatInput" required placeholder="$00.00">
+                                <input type="hidden" name="auction_id" value="{{ auction_id }}" required>
+                                <button class="eg-btn btn--primary button btn--md" type="submit">Place Bid</button>
+                            </div>
+                            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                            <script>
+                                $(document).ready(function(){
+                                    $('#floatInput').on('keydown', function(e){
+                                        // Allow: backspace, delete, tab, escape, enter, '.', and '-'
+                                        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190, 109, 189]) !== -1 ||
+                                             // Allow: Ctrl+A, Command+A
+                                            (e.keyCode === 65 && (e.ctrlKey === true || e.metaKey === true)) || 
+                                             // Allow: Ctrl+C, Command+C
+                                            (e.keyCode === 67 && (e.ctrlKey === true || e.metaKey === true)) || 
+                                             // Allow: Ctrl+V, Command+V
+                                            (e.keyCode === 86 && (e.ctrlKey === true || e.metaKey === true)) || 
+                                             // Allow: Ctrl+X, Command+X
+                                            (e.keyCode === 88 && (e.ctrlKey === true || e.metaKey === true)) || 
+                                             // Allow: home, end, left, right
+                                            (e.keyCode >= 35 && e.keyCode <= 39)) {
+                                                 // Let it happen, don't do anything
+                                                 return;
+                                        }
+                                        // Ensure that it is a number and stop the keypress
+                                        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105) && e.keyCode !== 190 && e.keyCode !== 110) {
+                                            e.preventDefault();
+                                        }
+                                    });
+                                });
+                            </script>
+                        </form>
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
                     </div>
                     {% endif %}
                 </div>
@@ -308,6 +414,7 @@
                             data-bs-target="#pills-bid" type="button" role="tab" aria-controls="pills-bid"
                             aria-selected="false">Send A Message</button>
                     </li>
+<<<<<<< HEAD
                     {% if auction.closed %}
                     <li class="nav-item" role="presentation">
                         <button class="nav-link details-tab-btn" id="pills-rate-tab" data-bs-toggle="pill"
@@ -315,6 +422,8 @@
                             aria-selected="false">Rate This Product</button>
                     </li>
                     {% endif %}
+=======
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
                 </ul>
                 <div class="tab-content" id="pills-tabContent">
                     <div class="tab-pane fade show active wow fadeInUp" data-wow-duration="1.5s"
@@ -325,11 +434,61 @@
                     </div>
                     <div class="tab-pane fade" id="pills-bid" role="tabpanel" aria-labelledby="pills-bid-tab">
                         <div class="bid-list-area">
+<<<<<<< HEAD
+=======
+                            <ul class="bid-list">
+
+                                {% if comments %}
+                                {% for comment in comments %}
+                                <li>
+                                    <div class="row d-flex align-items-center">
+                                        <div class="col-7">
+                                            <div class="bidder-area">
+                                                <div class="bidder-img">
+                                                    <img alt="image" src="{{ comment.user.profile_picture_url }}" style="height: 35px; width: 35px;">
+                                                </div>
+                                                <div class="bidder-content">
+                                                    <a href="#">
+                                                        <h6>{{ comment.user.username }}</h6>
+                                                    </a>
+                                                    <p>{{ comment.created_at }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-5 text-end">
+                                            <div class="bid-time">
+                                                <p>{{ comment.message }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                                {% else %}
+                                <li>
+                                    <div class="row d-flex align-items-center">
+                                        <div class="col-5">
+                                            <div class="bid-time">
+                                                <h6>No Message Found!</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                {% endif %}
+                            </ul>
+
+                            <!-- the chat section of the auction is here -->
+                            
+                            <hr>
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
                             {% if user.is_authenticated %}
                             <form method="post">
                                 {% csrf_token %}
                                 <div class="comment-form">
+<<<<<<< HEAD
                                     <textarea class="form-control" rows="2" placeholder="Write Message Here ..." id="comment" name="message_details"></textarea>
+=======
+                                    <textarea class="form-control" rows="2" placeholder="Write Message Here ..." id="comment" name="comment"></textarea>
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
                                     <input type="hidden" name="auction_id" value="{{ auction_id }}" required>
                                 </div>
                                 <br>
@@ -337,6 +496,7 @@
                             </form>
                             {% endif %}
                             <br>
+<<<<<<< HEAD
                         </div>
                     </div>
 
@@ -406,6 +566,9 @@
                                 </li>
                                 {% endfor %}
                             </ul>
+=======
+
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
                         </div>
                     </div>
                 </div>
@@ -416,6 +579,7 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
     $(document).ready(function(){
@@ -528,5 +692,59 @@ function makeTimer() {
         });
     });
 </script>
+=======
+
+  <script>
+    function makeTimer() {
+        var endTime=new Date({{ auction.date_expired|date:"U" }} * 1000);
+        endTime = (Date.parse(endTime) / 1000);
+    
+            var now = new Date();
+            now = (Date.parse(now) / 1000);
+    
+            var timeLeft = endTime - now;
+    
+            var days = Math.floor(timeLeft / 86400);
+            var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
+            var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600 )) / 60);
+            var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
+    
+            if (hours < "10") { hours = "0" + hours; }
+            if (minutes < "10") { minutes = "0" + minutes; }
+            if (seconds < "10") { seconds = "0" + seconds; }
+    
+            $("#days").html(days + "<span>D:</span>");
+            $("#hours").html(hours + "<span>H:</span>");
+            $("#minutes").html(minutes + "<span>M:</span>");
+            $("#seconds").html(seconds + "<span>S</span>");
+
+            $("#days1").html(days + "<span>D:</span>");
+            $("#hours1").html(hours + "<span>H:</span>");
+            $("#minutes1").html(minutes + "<span>M:</span>");
+            $("#seconds1").html(seconds + "<span>S</span>");
+
+            $("#days2").html(days + "<span>D:</span>");
+            $("#hours2").html(hours + "<span>H:</span>");
+            $("#minutes2").html(minutes + "<span>M:</span>");
+            $("#seconds2").html(seconds + "<span>S</span>");
+    
+        }
+        setInterval(function() { 
+            var endTime=new Date({{ auction.date_expired|date:"U" }} * 1000);
+            endTime = (Date.parse(endTime) / 1000);
+        
+            var now = new Date();
+            now = (Date.parse(now) / 1000);
+
+            var closed = "{{ auction.closed }}" ;
+            if(now >= endTime && closed === "False"){
+                // If the time has ran out, then refresh the page which will cause auction to close!
+                window.location.href = "{% url 'auction-closed' %}"
+            }else{
+                makeTimer(); 
+            }
+        }, 1000);
+  </script>
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
   
 {% endblock %}

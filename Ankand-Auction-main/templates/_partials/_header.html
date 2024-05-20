@@ -25,6 +25,7 @@
       <li>
         <a href="{% url 'auction-closed' %}">Closed Auctions</a>
       </li>
+<<<<<<< HEAD
       <li class="menu-item-has-children">
         <a href="#">Category</a><i class="bx bx-plus dropdown-icon"></i>
         <ul class="submenu">
@@ -39,12 +40,15 @@
           {% endfor %}
         </ul>
       </li>
+=======
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
       <li>
         <a href="{% url 'contact' %}">Contact</a>
       </li>
     </ul>
 
     <div class="d-lg-none d-block">
+<<<<<<< HEAD
         <ul class="menu-list">
           <li class="menu-item-has-children">
             <a href="#" class="drop-down">My Account</a><i class="bx bx-plus dropdown-icon"></i>
@@ -88,6 +92,14 @@
         </div>
       </form>
 
+=======
+      <form class="mobile-menu-form mb-5">
+        <div class="input-with-btn d-flex flex-column">
+          <input type="text" placeholder="Search here..." />
+          <button type="submit" class="eg-btn btn--primary btn--sm">Search</button>
+        </div>
+      </form>
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
       <div class="hotline two">
         <div class="hotline-info">
           <span>Click To Call</span>
@@ -106,6 +118,7 @@
         <h6><a href="tel:347-274-8816">+347-274-8816</a></h6>
       </div>
     </div>
+<<<<<<< HEAD
 
     <div class="dropdown" style="margin-right: 15px;">
       <div class="eg-btn btn--primary header-btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown">
@@ -129,11 +142,17 @@
       <i class="bi bi-search"></i>
     </div>
 
+=======
+    <div class="search-btn">
+      <i class="bi bi-search"></i>
+    </div>
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
     <div class="dropdown">
       <div class="eg-btn btn--primary header-btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown">
         <a href="{% url 'dashboard' %}">My Account</a>
       </div>
       <ul class="dropdown-menu menu-list" aria-labelledby="dropdownMenuButton1">
+<<<<<<< HEAD
         <div style="width: 12rem;">
         {% if user.is_authenticated %}
           <li>
@@ -157,6 +176,23 @@
           </li>
         {% endif %}
         </div>
+=======
+        {% if user.is_authenticated %}
+          <li>
+            <a class="dropdown-item" href="{% url 'dashboard' %}">Dashboard</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+          </li>
+        {% else %}
+          <li>
+            <a class="dropdown-item" href="{% url 'login' %}">Login</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="{% url 'register' %}">Sign Up</a>
+          </li>
+        {% endif %}
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
       </ul>
     </div>
     <div class="mobile-menu-btn d-lg-none d-block">

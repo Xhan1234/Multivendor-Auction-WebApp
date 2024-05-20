@@ -19,7 +19,11 @@ class CreateUserForm(UserCreationForm):
 
 
 class EditUserProfileForm(forms.ModelForm):
+<<<<<<< HEAD
     profile_picture = forms.ImageField(widget=forms.FileInput, required=False)
+=======
+    profile_picture = forms.ImageField(widget=forms.FileInput)
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
 
     class Meta:
         model = UserProfile
@@ -29,9 +33,12 @@ class EditUserProfileForm(forms.ModelForm):
             'state': StateWidget(),  # Use the custom StateWidget for the 'state' field
             'city': CityWidget(),    # Use the custom CityWidget for the 'city' field
         }
+<<<<<<< HEAD
 
 
 class EditVendorPaymentSettingsForm(forms.ModelForm):
     class Meta:
         model = UserProfile
         fields = ['paypal_recipient_email', 'stripe_account_id']
+=======
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388

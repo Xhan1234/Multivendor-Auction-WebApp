@@ -1,8 +1,11 @@
 from django.shortcuts import render, redirect, get_object_or_404, HttpResponse
 from users.models import UserProfile
+<<<<<<< HEAD
 from messaging.models import Message
 from auctions.models import Bidder, Notification, Category
 from django.db.models import Q, Count
+=======
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
 
 
 def is_vendor(request):
@@ -12,6 +15,7 @@ def is_vendor(request):
 
         return {'is_vendor': is_vendor}
     else:
+<<<<<<< HEAD
         return {'is_vendor': None}
     
 
@@ -44,3 +48,6 @@ def notifications(request):
 def categories(request):
     categories = Category.objects.filter(status=True).order_by('-id')
     return {'categories': categories}
+=======
+        return {'is_vendor': None}
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388

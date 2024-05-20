@@ -48,7 +48,10 @@ INSTALLED_APPS = [
     'website',
     'users',
     'messaging',
+<<<<<<< HEAD
     'payments',
+=======
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
     
     # Crispy Bootstrap Form
     'crispy_forms',
@@ -56,7 +59,10 @@ INSTALLED_APPS = [
 
     # Sweetalert2 functionality 
     'sweetify',
+<<<<<<< HEAD
 
+=======
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
 ]
 
 
@@ -91,11 +97,14 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'context.processors.is_vendor',
+<<<<<<< HEAD
                 'context.processors.is_read_count',
                 'context.processors.my_bid_count',
                 'context.processors.notification_count',
                 'context.processors.notifications',
                 'context.processors.categories',
+=======
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
             ],
         },
     },
@@ -109,6 +118,7 @@ WSGI_APPLICATION = 'ankand.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
+<<<<<<< HEAD
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'auction_db',
@@ -119,6 +129,19 @@ DATABASES = {
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
         }
+=======
+    'default': {  
+        'ENGINE': 'django.db.backends.mysql',  
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
+        'PORT': os.getenv('DB_PORT'),
+        'STORAGE_ENGINE': 'MyISAM / INNODB / ETC',
+        'OPTIONS': {  
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'; SET foreign_key_checks = 0;",
+            }
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
     }
 }
 
@@ -151,7 +174,11 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
+<<<<<<< HEAD
 USE_TZ = False
+=======
+USE_TZ = True
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
 
 
 # Static files (CSS, JavaScript, Images)
@@ -186,6 +213,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap5'
 # Login redirection
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
+<<<<<<< HEAD
 
 CELERY_BROKER_URL = 'redis://localhost:6379/0'
 CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
@@ -205,3 +233,5 @@ PAYPAL_SECRET = os.getenv('PAYPAL_SECRET')
 
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY')
+=======
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388

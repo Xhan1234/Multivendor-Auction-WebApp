@@ -13,16 +13,21 @@ urlpatterns = [
 
     # Auctions
     path('auctions-submit' , views.auctions_submit, name='auctions-submit'),
+<<<<<<< HEAD
     path('auctions-submit-ajax' , views.auctions_submit_ajax, name='auctions-submit-ajax'),
     path('auctions/bid/<str:slug>', views.auctions_bid_details, name='auction-bid-details'),
     path('auctions-mybids/' , views.auctions_mybids, name='auctions-mybids'),
     path('auction-my-bid-delete/<int:id>' , views.auction_mybid_delete, name='auction-my-bid-delete'),
+=======
+    path('auctions-mybids/' , views.auctions_mybids, name='auctions-mybids'),
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
     path('auctions-mybids/details/<str:slug>' , views.auctions_mybids_details, name='auctions-mybids-details'),
     path('auctions-winning', views.winning_bids, name='auctions-winning'),
     path('auctions-closed', views.closedAuctions, name='auction-closed'),
 
     # Auction Vendor Product List
     path('auctions/vendor/<str:author>', views.auctions_vendor_list, name='auctions-vendor'),
+<<<<<<< HEAD
 
     # Direct Buy
     path('buy-it-now/<str:slug>', views.buy_it_now, name='buy-it-now'),
@@ -46,4 +51,7 @@ urlpatterns = [
 
     path('reports' , views.reports, name='reports'),
 
+=======
+    
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
     ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

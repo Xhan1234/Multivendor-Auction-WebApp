@@ -7,6 +7,7 @@ urlpatterns = [
     path('login', auth_views.LoginView.as_view(template_name='users/auth/login.html'), name='login'),
     path('logout', views.user_logout ,name='logout'),
     path('profile/<str:username>/', views.profile, name='profile'),
+<<<<<<< HEAD
     path('change/password/', views.change_password, name='change-password'),
 
     path('password-reset/', auth_views.PasswordResetView.as_view(
@@ -31,4 +32,9 @@ urlpatterns = [
     path('dashboard/', views.dashboard, name='dashboard'),
 
     path('profile/payment-settings/<str:username>/', views.profile_payment_settings, name='profile-payment-settings'),
+=======
+
+    # User Dashboard
+    path('dashboard/', views.dashboard, name='dashboard'),
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
 ]

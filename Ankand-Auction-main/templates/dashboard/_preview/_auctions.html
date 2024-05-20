@@ -2,6 +2,7 @@
 {% load static %}
 {% load crispy_forms_tags %}
 {% block dashboard_contents %}
+<<<<<<< HEAD
 <div class="messages">
     {% for message in messages %}
     <div class="alert {% if message.tags == 'error' %}alert-danger{% endif %}
@@ -12,6 +13,8 @@
     {% endfor %}
 </div>
 
+=======
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
 <div class="tab-pane fade show active" id="v-pills-dashboard" role="tabpanel"
 aria-labelledby="v-pills-dashboard-tab">
 
@@ -35,7 +38,11 @@ aria-labelledby="v-pills-dashboard-tab">
         <tbody>
             {% for item in page_obj %}
             <tr>
+<<<<<<< HEAD
                 <td data-label="Title">{{ item.title|truncatechars:50 }}</td>
+=======
+                <td data-label="Title">{{ item.title }}</td>
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
                 <td data-label="Bidding ID">{{ item.price }}</td>
                 <td data-label="Bid Amount(USD)">{{ item.quantity }}</td>
                 <td data-label="Image"><img alt="image" src="{{ item.image.url }}"

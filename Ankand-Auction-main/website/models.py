@@ -2,7 +2,10 @@ from django.db import models
 from django.utils import timezone
 from PIL import Image
 from django.core.exceptions import ValidationError
+<<<<<<< HEAD
 from django.core.validators import *
+=======
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
 
 def validate_min_image_dimensions(value):
     """
@@ -45,6 +48,7 @@ class Slider(models.Model):
             print(img)
         else:
             pass
+<<<<<<< HEAD
 
 
 class Contact(models.Model):
@@ -109,3 +113,5 @@ class PercentageGain(models.Model):
     def __str__(self):
         return str(self.percentage)
     
+=======
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388

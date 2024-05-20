@@ -24,12 +24,19 @@
           {% for item in categories %}
           <div class="swiper-slide">
             <div class="eg-card category-card1 wow animate fadeInDown" data-wow-duration="1500ms" data-wow-delay="200ms">
+<<<<<<< HEAD
               <a href="{% url 'category' item.slug %}">
                 <div class="cat-icon">
                   <img alt="image" src="{{ item.icon.url }}" />
                 </div>
                 <h5>{{ item.title }}</h5>
               </a>
+=======
+              <div class="cat-icon">
+                <img alt="image" src="{{ item.icon.url }}" />
+              </div>
+              <a href="{% url 'category' item.slug %}"><h5>{{ item.title }}</h5></a>
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
             </div>
           </div>
           {% endfor %}
@@ -85,7 +92,11 @@
             <script>
                 setInterval(function() { 
                   var counter = "{{ forloop.counter }}" ;
+<<<<<<< HEAD
                   var endTime=new Date({{ auction.expired_date|date:"U" }} * 1000);
+=======
+                  var endTime=new Date({{ auction.date_expired|date:"U" }} * 1000);
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
                   endTime = (Date.parse(endTime) / 1000);
               
                   var now = new Date();
@@ -94,7 +105,11 @@
                   var closed = "{{ auction.closed }}" ;
                   if(now >= endTime && closed === "False"){
                       // If the time has ran out, then refresh the page which will cause auction to close!
+<<<<<<< HEAD
                       window.location.href = window.location.href
+=======
+                      window.location.href = "{% url 'auction-closed' %}"
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
                   }else{
                       makeTimer(endTime, counter);   
                   }
@@ -123,6 +138,7 @@
                     <div class="auction-content">
                         <h4><a href="{% url 'auction-details' auction.slug %}">{{ auction.title|truncatechars:20 }}</a></h4>
                         <p>
+<<<<<<< HEAD
                           {% if auction.type == 'auction' or auction.type == 'auction & buy-it-now' %}
                           Bidding Price : 
                           <span>
@@ -144,6 +160,19 @@
                           {% if auction.type == 'buy-it-now' or auction.type == 'auction & buy-it-now' %}
                             <a href="{% url 'auction-details' auction.slug %}" class="eg-btn btn--primary3 btn--sm">Buy It Now</a>
                           {% endif %}
+=======
+                            Bidding Price : 
+                            <span>
+                              {% if auction.latest_bid is not None %}
+                                  ${{ auction.latest_bid }}
+                              {% else %}
+                                  ${{ auction.price }}
+                              {% endif %}
+                            </span>
+                          </p>
+                        <div class="auction-card-bttm">
+                            <a href="{% url 'auction-details' auction.slug %}" class="eg-btn btn--primary btn--sm">Place a Bid</a>
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
                             <div class="share-area">
                                 <ul class="social-icons d-flex">
                                     <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>

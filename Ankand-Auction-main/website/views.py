@@ -2,6 +2,7 @@ from auctions.models import Auction, Category
 from django.shortcuts import render
 from users.models import UserProfile
 from django.core.paginator import Paginator
+<<<<<<< HEAD
 from website.models import *
 from django.shortcuts import render, redirect, get_object_or_404, HttpResponse
 from django.contrib import messages
@@ -15,6 +16,15 @@ def home(request):
     sliders = Slider.objects.filter(status=True).order_by('-id')
     category = Category.objects.filter(status=True).order_by('-id')
     auctions = Auction.objects.filter(closed=False).order_by('-id')[:12] #, quantity__gt=0
+=======
+from website.models import Slider
+from django.shortcuts import render, redirect, get_object_or_404, HttpResponse
+
+def home(request):
+    sliders = Slider.objects.filter(status=True).order_by('-id')
+    category = Category.objects.filter(status=True).order_by('-id')
+    auctions = Auction.objects.filter(closed=False).order_by('-id')[:12]
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
     context = {
         'auctions': auctions,
         'sliders': sliders,
@@ -23,8 +33,11 @@ def home(request):
     return render(request, 'index.html', context)
 
 def live_auctions_list(request):
+<<<<<<< HEAD
     check_expired_auctions()
     check_auctions_about_to_end()
+=======
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
     auctions = Auction.objects.filter(closed=False).order_by('-id')
 
     paginator = Paginator(auctions, 15)
@@ -39,8 +52,12 @@ def live_auctions_list(request):
 
 
 def category(request, slug):
+<<<<<<< HEAD
     check_expired_auctions()
     check_auctions_about_to_end()
+=======
+    # return HttpResponse(category)
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
     category = get_object_or_404(Category, slug=slug)
     auctions = Auction.objects.filter(closed=False, category=category)
     categories = Category.objects.filter(status=True).order_by('-id')
@@ -71,6 +88,7 @@ def blog_details(request):
 
 
 def contact(request):
+<<<<<<< HEAD
     if request.method == 'POST':
         name = request.POST.get('name')
         email = request.POST.get('email')
@@ -82,6 +100,9 @@ def contact(request):
         return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
     else:
         return render(request, 'contact.html')
+=======
+    return render(request, 'contact.html')
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
 
 
 def inbox(request):

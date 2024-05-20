@@ -4,6 +4,7 @@ from django.forms import ModelForm
 from users.widgets import StateWidget, CityWidget
 
 
+<<<<<<< HEAD
 class ProductSearchForm(forms.Form):
     query = forms.CharField(label='Search')
 
@@ -27,6 +28,12 @@ class CreateAuctionForm(ModelForm):
     #     if direct_buy is not None and direct_buy < 1:
     #         raise forms.ValidationError("Direct Buy value must be at least 1.")
     #     return direct_buy
+=======
+class CreateauctionForm(ModelForm):
+    class Meta:
+        model = Auction
+        fields = ['title', 'category', 'description', 'details_description', 'price', 'quantity', 'image', 'image1', 'image2', 'condition', 'date_created', 'date_expired', 'status']
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
 
 
 class OrderForm(forms.Form):
@@ -49,6 +56,7 @@ class CommentForm(forms.Form):
     comment = forms.CharField(widget=forms.Textarea)
 
 
+<<<<<<< HEAD
 class BillingAddressForm(forms.ModelForm):
     address = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control', 'rows': 3}))
     phone = PhoneNumberField()
@@ -82,3 +90,15 @@ class ReviewForm(forms.ModelForm):
 	class Meta:
 		model = Review
 		fields = ("comment","rate")
+=======
+class ShippingAddressForm(forms.ModelForm):
+    class Meta:
+        model = ShippingAddress
+        fields = ['first_name', 'last_name', 'address', 'phone', 'state', 'city', 'street', 'zip_code','postal_code', 'house']
+        widgets = {
+            'phone': forms.TextInput(attrs={'class': 'form-control'}),
+            'state': StateWidget(),  # Use the custom StateWidget for the 'state' field
+            'city': CityWidget(),    # Use the custom CityWidget for the 'city' field
+        }
+        
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388

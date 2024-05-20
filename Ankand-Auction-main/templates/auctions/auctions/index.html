@@ -9,6 +9,7 @@ aria-labelledby="v-pills-dashboard-tab">
     <h3>My Bids</h3>
 </div>
 
+<<<<<<< HEAD
 <div class="messages">
     {% for message in messages %}
     <div class="alert {% if message.tags == 'error' %}alert-danger{% endif %}
@@ -19,11 +20,14 @@ aria-labelledby="v-pills-dashboard-tab">
     {% endfor %}
 </div>
 
+=======
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
 <div class="table-wrapper">
     <table class="eg-table order-table table mb-0">
         <thead>
             <tr>
                 <th>Title</th>
+<<<<<<< HEAD
                 <th>Current Bid</th>
                 <th>My Bid</th>
                 <th>Image</th>
@@ -56,6 +60,25 @@ aria-labelledby="v-pills-dashboard-tab">
                     </button>
                     {% endif %}
                 </td>
+=======
+                <th>Bid Price</th>
+                <th>Image</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in mybids %}
+            <tr>
+                <td data-label="Title"><a href="{% url 'auctions-mybids-details' item.auction.slug %}">{{ item.auction }}</a></td>
+                <td data-label="Bidding ID">$ {{ item.bid_amount }}</td>
+                <td data-label="Image"><img alt="image" src="{{ item.auction.image.url }}"
+                        class="img-fluid"></td>
+                {% if item.winningBid %}
+                    <td data-label="Status" class="text-success">Win</td>
+                {% else %}
+                    <td data-label="Status" class="text-info">In-progress</td>
+                {% endif %}
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
             </tr>
             {% endfor %}
         </tbody>

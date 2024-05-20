@@ -11,7 +11,10 @@ urlpatterns = [
     path('blog-details', views.blog_details, name='blog-details'),
     path('contact/', views.contact, name='contact'),
     path('category/<str:slug>', views.category, name='category'),
+<<<<<<< HEAD
     
+=======
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
     path('msg-inbox/', views.inbox, name='msg-inbox'),
 
     path('shop/', views.shop, name='shop'),

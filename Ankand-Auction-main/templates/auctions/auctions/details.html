@@ -25,12 +25,21 @@
                 <div class="tab-content mb-4 d-flex justify-content-lg-start justify-content-center  wow fadeInUp"
                     data-wow-duration="1.5s" data-wow-delay=".4s">
                     <div class="tab-pane big-image fade show active" id="gallery-img1">
+<<<<<<< HEAD
                         <img alt="image" src="{{ auction.image.url }}" class="img-fluid" style="height: 400px; width: 500px;">
+=======
+                        <div
+                            class="auction-gallery-timer d-flex align-items-center justify-content-center flex-wrap">
+                            <h3><span id="days"></span><span id="hours"></span><span id="minutes"></span><span id="seconds"></span></h3>
+                        </div>
+                        <img alt="image" src="{{ mybids.auction.image.url }}" class="img-fluid" style="height: 400px; width: 500px;">
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
                     </div>
                 </div>
             </div>
             <div class="col-xl-6 col-lg-5">
                 <div class="auction-details-right  wow fadeInDown" data-wow-duration="1.5s" data-wow-delay=".2s">
+<<<<<<< HEAD
                     <a><h3>{{ auction.title }}</h3></a>
                     <h5>Condition: {{ auction.condition }}</h5>
                     <h5>Auction Closed On: {{ auction.expired_date }}</h5>
@@ -52,6 +61,23 @@
                                 Auction Running!
                             {% endif %}
                             </h6>
+=======
+                    <a><h3>{{ mybids.auction.title }}</h3></a>
+                    <h5>Condition: {{ mybids.auction.condition }}</h5>
+                    <h5>Auction Closed On: {{ mybids.auction.date_expired }}</h5>
+                    <h6>Author: {{ mybids.auction.author }}</h6>
+                    <p class="para">{{ mybids.auction.description|slice:":300" }}</p>
+                    <div class="bid-form">
+                        <div class="form-title" style="margin-bottom: 0px;">
+                            {% if mybids.auction.winnerBid %}
+                                <h5> Winner: {{ mybids.auction.winnerBid.user.username }}</h5>
+                            {% else %}
+                            <h5> Winner: None</h5>
+                            {% endif %}
+
+                            <h6>Bidding Price: <span>${{ mybids.auction.price }}</span></h6>
+                            <h6>Winning Price: ${{ mybids.auction.winnerBid }}</h6>
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
                         </div>
 
                     </div>

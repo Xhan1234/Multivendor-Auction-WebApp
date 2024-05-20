@@ -10,6 +10,7 @@ An auction/biding system that have on the frontend a countdown do be visible wit
 _Fixing bugs, integrate new feature and deploy it and to be ready for usage from customers._
 
 ### Features
+<<<<<<< HEAD
 * Auction / Bidding System.
 * Direct Buy Products System
 * PayPal, Credit Card System
@@ -34,6 +35,18 @@ _Fixing bugs, integrate new feature and deploy it and to be ready for usage from
 * Javascript (Pure JS, Ajax, Jquery)
 * Asynchronous Tasks With Django and Celery
 * Database - MySQL
+=======
+* Integrated the auction/bidding system.
+* And it's frontend technologies
+* PayPal, Credit card
+* User Authentication and Authorization
+* Templates and Static Files
+* Models and Database Interactions
+* MySQL Database Configuration
+* Documentation
+* Version Control and Collaboration
+
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
 
 # Project Setup
 
@@ -43,13 +56,21 @@ To use this project to your own machine follow this steps
 
 First of all, clone this repository using this command
 
+<<<<<<< HEAD
     git clone https://github.com/mehedishovon01/Ankand-Auction.git
+=======
+    git clone https://github.com/Xhan1234/webapp-auction.git
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
 
 ### Create a virtualenv
 
 Make a virtual environment to your project directory. Let's do this,
 
+<<<<<<< HEAD
 If you have already an existing python virtualenv then run this
+=======
+If you have already an existing python3 virtualenv then run this
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
 
     virtualenv venv
 
@@ -83,6 +104,7 @@ I am using `MySQL` database here. To configure MySQL in your Django project, you
         }
     }
 
+<<<<<<< HEAD
 ### Make an .env
 
 Copy .env from .env.example file for put the secret credentials
@@ -90,6 +112,9 @@ Copy .env from .env.example file for put the secret credentials
     cp .env.example .env
 
 After that, put the database credentials and mail credentials `(Do not use the direct Mail Password)`
+=======
+Copy .env.example to .env and then put credentials.
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
 
 
 ### Create database
@@ -98,15 +123,25 @@ We have already configured the MySQL in our project.
 
 So, simply apply the migrations:
 
+<<<<<<< HEAD
     python manage.py migrate
     
 Boooooom! Project setup is done.
+=======
+    python3 manage.py migrate
+    
+Boooooom! Your project setup is done.
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
 
 ### Run this project
 
 Let's run the development server:
 
+<<<<<<< HEAD
     python manage.py runserver
+=======
+    python3 manage.py runserver
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
 
 That’s it! Now you’re project is already run into a development server. 
 

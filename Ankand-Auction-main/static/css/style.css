@@ -192,6 +192,7 @@ i.bx {
     transform: rotateY(90deg)
 }
 
+<<<<<<< HEAD
 
 .btn--secondary {
     background: #1f2230;
@@ -232,12 +233,18 @@ i.bx {
 
 
 
+=======
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
 .btn--primary2 {
     background: #1f2230;
     color: #fff;
     position: relative;
     z-index: 1;
     white-space: nowrap;
+<<<<<<< HEAD
+=======
+    border-radius: 100px
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
 }
 
 .btn--primary2::before {
@@ -251,7 +258,11 @@ i.bx {
     background: #f9395f;
     transition: all .52s;
     z-index: -1;
+<<<<<<< HEAD
     border-radius: 5px
+=======
+    border-radius: 100px
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
 }
 
 .btn--primary2::after {
@@ -265,7 +276,11 @@ i.bx {
     background: #f9395f;
     transition: all .52s;
     z-index: -1;
+<<<<<<< HEAD
     border-radius: 5px
+=======
+    border-radius: 100px
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
 }
 
 .btn--primary2:hover {
@@ -286,6 +301,10 @@ i.bx {
     position: relative;
     z-index: 1;
     white-space: nowrap;
+<<<<<<< HEAD
+=======
+    border-radius: 100px
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
 }
 
 .btn--primary3::before {
@@ -296,10 +315,17 @@ i.bx {
     position: absolute;
     top: 0%;
     left: 0%;
+<<<<<<< HEAD
     background: #027f9e;
     transition: all .52s;
     z-index: -1;
     border-radius: 5px
+=======
+    background: #029e7c;
+    transition: all .52s;
+    z-index: -1;
+    border-radius: 100px
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
 }
 
 .btn--primary3::after {
@@ -310,10 +336,17 @@ i.bx {
     position: absolute;
     top: 0%;
     left: 0%;
+<<<<<<< HEAD
     background: #027f9e;
     transition: all .52s;
     z-index: -1;
     border-radius: 5px
+=======
+    background: #029e7c;
+    transition: all .52s;
+    z-index: -1;
+    border-radius: 100px
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
 }
 
 .btn--primary3:hover {
@@ -392,10 +425,13 @@ i.bx {
     background: #f9395f
 }
 
+<<<<<<< HEAD
 .action-btn.info {
     background: #0988dd
 }
 
+=======
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
 .action-btn.green {
     background: #32c36c
 }
@@ -6196,8 +6232,13 @@ ul.recent-post .single-post .post-img {
 }
 
 ul.recent-post .single-post .post-img img {
+<<<<<<< HEAD
     min-width: 30px;
     height: 30px;
+=======
+    min-width: 64px;
+    height: 64px;
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
     border-radius: 5px;
     margin-bottom: 0
 }
@@ -7809,11 +7850,19 @@ footer.style-3 .footer-bottom .footer-logo-list li:hover img {
 }
 
 .auction-details-right .bid-form {
+<<<<<<< HEAD
     margin-top: 5px;
     /* box-shadow: 5px 2px 30px rgba(0, 0, 0, .06); */
     border-radius: 1px;
     background: #fff;
     padding: 10px
+=======
+    margin-top: 40px;
+    box-shadow: 5px 2px 30px rgba(0, 0, 0, .06);
+    border-radius: 5px;
+    background: #fff;
+    padding: 25px
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
 }
 
 .auction-details-right .bid-form .form-title {
@@ -8042,7 +8091,11 @@ footer.style-3 .footer-bottom .footer-logo-list li:hover img {
 }
 
 .bid-list-area {
+<<<<<<< HEAD
     max-height: 600px;
+=======
+    max-height: 350px;
+>>>>>>> 41ce99e8504ce1f6a33fea582ca514a77751c388
     overflow-y: auto;
     background: #fff;
     box-shadow: 3px 5px 20px rgba(0, 0, 0, .06);
